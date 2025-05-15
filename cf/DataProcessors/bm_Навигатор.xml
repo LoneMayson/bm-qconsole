@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<DataProcessor uuid="b61e1b7b-2f07-41b9-98f9-353dd6f3bf71">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.bm_Навигатор" category="Object">
+				<xr:TypeId>5a455a28-80cb-4993-909b-2eea3c97ba8b</xr:TypeId>
+				<xr:ValueId>f7f4f067-95ea-40cf-b3a0-57e124cb4c26</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.bm_Навигатор" category="Manager">
+				<xr:TypeId>fc8af21c-7b0d-4c37-8ce2-28e5aa8600b0</xr:TypeId>
+				<xr:ValueId>112109bd-4784-4a09-bc7c-fb7ac6d63ff4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>bm_Навигатор</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>bm Навигатор</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.bm_Навигатор.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаОбъекта</Form>
+			<Form>ФормаОбработкаДвиженияДокумента</Form>
+			<Form>ФормаОтчетДвиженияДокумента</Form>
+			<Form>ФормаОтчетДвиженияДокументаНастройки</Form>
+			<Form>КонструкторУИД</Form>
+			<Form>ПоискПоUUID</Form>
+			<Form>ПоискПоURL</Form>
+			<Template>ОтчетДвиженияДокументаМакет</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

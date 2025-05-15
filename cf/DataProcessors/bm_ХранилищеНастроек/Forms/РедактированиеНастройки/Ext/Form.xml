@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаУдалитьНастройки" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаУдалитьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаКомандаУдалитьНастройкиРасширеннаяПодсказка" id="21"/>
+			</Button>
+			<Button name="ФормаКомандаСкопироватьНастройки" id="25">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаСкопироватьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаКомандаСкопироватьНастройкиРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ТаблицаНастроек" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаНастроек</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаНастроекКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаНастроекКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ТаблицаНастроекРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаНастроекСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаНастроек</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНастроекСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаНастроекСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаНастроекСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ТаблицаНастроек</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНастроекСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаНастроекСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаНастроекУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ТаблицаНастроек</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНастроекУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаНастроекУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаНастроекКлючОбъекта" id="17">
+					<DataPath>ТаблицаНастроек.КлючОбъекта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаНастроекКлючОбъектаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТаблицаНастроекКлючОбъектаРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ТаблицаНастроекКлючНастроек" id="14">
+					<DataPath>ТаблицаНастроек.КлючНастроек</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаНастроекКлючНастроекКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаНастроекКлючНастроекРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="ПрименитьКоВсемПользователям" id="22">
+			<DataPath>ПрименитьКоВсемПользователям</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПрименитьКоВсемПользователямКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПрименитьКоВсемПользователямРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаВыбранныеПользователи" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбранные пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбранные пользователи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыбранныеПользователиРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКоманднаяПанельВыбранныеПользователи" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель выбранные пользователи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель выбранные пользователи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельВыбранныеПользователиРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<ButtonGroup name="ГруппаВыбратьПользователей" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выбрать пользователей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выбрать пользователей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ГруппаВыбратьПользователейРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<Button name="КомандаВыбратьПользователей" id="63">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.КомандаВыбратьПользователей</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбрать</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КомандаВыбратьПользователейРасширеннаяПодсказка" id="64"/>
+								</Button>
+								<Button name="КомандаВыбратьВсехПользователей" id="69">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.КомандаВыбратьВсехПользователей</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>всех</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КомандаВыбратьВсехПользователейРасширеннаяПодсказка" id="70"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<Button name="КомандаОчиститьВыбранныхПользователей" id="71">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.КомандаОчиститьВыбранныхПользователей</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КомандаОчиститьВыбранныхПользователейРасширеннаяПодсказка" id="72"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="ГруппаСпискиПользователей" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списки пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списки пользователей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСпискиПользователейРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<Table name="ВыбранныеПользователи" id="29">
+							<Representation>List</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>ВыбранныеПользователи</DataPath>
+							<RowPictureDataPath>ВыбранныеПользователи.Picture</RowPictureDataPath>
+							<ContextMenu name="ВыбранныеПользователиКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="ВыбранныеПользователиКоманднаяПанель" id="31"/>
+							<ExtendedTooltip name="ВыбранныеПользователиРасширеннаяПодсказка" id="32"/>
+							<SearchStringAddition name="ВыбранныеПользователиСтрокаПоиска" id="33">
+								<AdditionSource>
+									<Item>ВыбранныеПользователи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеПользователиСтрокаПоискаКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ВыбранныеПользователиСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВыбранныеПользователиСостояниеПросмотра" id="36">
+								<AdditionSource>
+									<Item>ВыбранныеПользователи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеПользователиСостояниеПросмотраКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ВыбранныеПользователиСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВыбранныеПользователиУправлениеПоиском" id="39">
+								<AdditionSource>
+									<Item>ВыбранныеПользователи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеПользователиУправлениеПоискомКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ВыбранныеПользователиУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВыбранныеПользователиЗначение" id="42">
+									<DataPath>ВыбранныеПользователи.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ВыбранныеПользователиЗначениеКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ВыбранныеПользователиЗначениеРасширеннаяПодсказка" id="44"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="СписокПользователей" id="45">
+							<Representation>List</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>СписокПользователей</DataPath>
+							<RowPictureDataPath>СписокПользователей.Picture</RowPictureDataPath>
+							<ContextMenu name="СписокПользователейКонтекстноеМеню" id="46"/>
+							<AutoCommandBar name="СписокПользователейКоманднаяПанель" id="47"/>
+							<ExtendedTooltip name="СписокПользователейРасширеннаяПодсказка" id="48"/>
+							<SearchStringAddition name="СписокПользователейСтрокаПоиска" id="49">
+								<AdditionSource>
+									<Item>СписокПользователей</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПользователейСтрокаПоискаКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="СписокПользователейСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПользователейСостояниеПросмотра" id="52">
+								<AdditionSource>
+									<Item>СписокПользователей</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПользователейСостояниеПросмотраКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="СписокПользователейСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПользователейУправлениеПоиском" id="55">
+								<AdditionSource>
+									<Item>СписокПользователей</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПользователейУправлениеПоискомКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="СписокПользователейУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокПользователейВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокПользователейЗначение" id="58">
+									<DataPath>СписокПользователей.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СписокПользователейЗначениеКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="СписокПользователейЗначениеРасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.bm_ХранилищеНастроек</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаНастроек" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КлючНастроек" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ настроек</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючОбъекта" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ объекта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПрименитьКоВсемПользователям" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить ко всем пользователям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Команда" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокПользователей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВыбранныеПользователи" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаУдалитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУдалитьНастройки</Action>
+		</Command>
+		<Command name="КомандаСкопироватьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСкопироватьНастройки</Action>
+		</Command>
+		<Command name="КомандаВыбратьПользователей" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыбратьПользователей</Action>
+		</Command>
+		<Command name="КомандаВыбратьВсехПользователей" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать всех пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать всех пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыбратьВсехПользователей</Action>
+		</Command>
+		<Command name="КомандаОчиститьВыбранныхПользователей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить выбранных пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить выбранных пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОчиститьВыбранныхПользователей</Action>
+		</Command>
+	</Commands>
+</Form>

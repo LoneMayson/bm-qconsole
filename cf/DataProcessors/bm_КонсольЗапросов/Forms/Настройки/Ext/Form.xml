@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОК" id="14">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="15"/>
+			</Button>
+			<Button name="ФормаОтмена" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="НастройкаВыводитьСвойстваВыборки" id="11">
+			<DataPath>НастройкаВыводитьСвойстваВыборки</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип записи, уровень, группировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкаВыводитьСвойстваВыборкиКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="НастройкаВыводитьСвойстваВыборкиРасширеннаяПодсказка" id="13"/>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкаВыделятьОтрицательные" id="18">
+			<DataPath>НастройкаВыделятьОтрицательные</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкаВыделятьОтрицательныеКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="НастройкаВыделятьОтрицательныеРасширеннаяПодсказка" id="20"/>
+		</CheckBoxField>
+		<InputField name="НастройкаМаксКоличествоСтрок" id="8">
+			<DataPath>НастройкаМаксКоличествоСтрок</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>0 (без огр.)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">100</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">1000</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="НастройкаМаксКоличествоСтрокКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="НастройкаМаксКоличествоСтрокРасширеннаяПодсказка" id="10"/>
+		</InputField>
+		<UsualGroup name="ГруппаФиксШиринаКолонок" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фикс ширина колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФиксШиринаКолонокРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<CheckBoxField name="НастройкаФиксированнаяШиринаКолонок" id="33">
+					<DataPath>НастройкаФиксированнаяШиринаКолонок</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Одинаковая ширина колонок и формат строк (может быть удобно для выгрузки в файл)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НастройкаФиксированнаяШиринаКолонокКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="НастройкаФиксированнаяШиринаКолонокРасширеннаяПодсказка" id="35"/>
+					<Events>
+						<Event name="OnChange">НастройкаФиксированнаяШиринаКолонокПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="НастройкаШиринаКолонок" id="36">
+					<DataPath>НастройкаШиринаКолонок</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НастройкаШиринаКолонокКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="НастройкаШиринаКолонокРасширеннаяПодсказка" id="38"/>
+					<Events>
+						<Event name="OnChange">НастройкаШиринаКолонокПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НастройкаМаксШиринаКолонок" id="21">
+			<DataPath>НастройкаМаксШиринаКолонок</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индивидуальный формат строк для каждой таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<DropListButton>true</DropListButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>0 (без огр.)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">60</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="НастройкаМаксШиринаКолонокКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="НастройкаМаксШиринаКолонокРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<CheckBoxField name="НастройкаПереноситьТекст" id="24">
+			<DataPath>НастройкаПереноситьТекст</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкаПереноситьТекстКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="НастройкаПереноситьТекстРасширеннаяПодсказка" id="26"/>
+		</CheckBoxField>
+		<InputField name="НастройкаФорматЧисла" id="27">
+			<DataPath>НастройкаФорматЧисла</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="НастройкаФорматЧислаКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="НастройкаФорматЧислаРасширеннаяПодсказка" id="29"/>
+			<Events>
+				<Event name="StartChoice">НастройкаФорматЧислаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="НастройкаСохранятьРезультаты" id="66">
+			<DataPath>НастройкаСохранятьРезультаты</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять табличный документ при переключении между запросами </v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкаСохранятьРезультатыКонтекстноеМеню" id="67"/>
+			<ExtendedTooltip name="НастройкаСохранятьРезультатыРасширеннаяПодсказка" id="68"/>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкаВыполнятьВФоне" id="30">
+			<DataPath>НастройкаВыполнятьВФоне</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение в фоне при наличии в используемой конфигурации модуля длительных операций БСП (а также установленного расширения bm Запросы)
+Следует учитывать, что в фоновое задание передаются таблицы значений в параметрах запроса и временных таблицах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкаВыполнятьВФонеКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="НастройкаВыполнятьВФонеРасширеннаяПодсказка" id="32"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаРаботаСТЖ" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с ТЖ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа работа СТЖ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаРаботаСТЖРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<CheckBoxField name="НастройкаРаботаСТЖ" id="47">
+					<DataPath>НастройкаРаботаСТЖ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НастройкаРаботаСТЖКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="НастройкаРаботаСТЖРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">НастройкаРаботаСТЖПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаНастройкаТЖФайлКонфигурацииЛогов" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройка ТЖ Файл конфигурации логов</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкаТЖФайлКонфигурацииЛоговРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<InputField name="НастройкаТЖПутьКФайлуКонфигурацииЛогов" id="50">
+							<DataPath>НастройкаТЖПутьКФайлуКонфигурацииЛогов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<OpenButton>true</OpenButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НастройкаТЖПутьКФайлуКонфигурацииЛоговКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="НастройкаТЖПутьКФайлуКонфигурацииЛоговРасширеннаяПодсказка" id="52"/>
+							<Events>
+								<Event name="Opening">НастройкаТЖПутьКФайлуКонфигурацииЛоговОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="НастройкаТЖКаталогЛогов" id="41">
+					<DataPath>НастройкаТЖКаталогЛогов</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь к каталогу логов из файла logcfg.xml</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ChoiceButton>true</ChoiceButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НастройкаТЖКаталогЛоговКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="НастройкаТЖКаталогЛоговРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="НастройкаТЖКаталогТекущихЛогов" id="58">
+					<DataPath>НастройкаТЖКаталогТекущихЛогов</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь к каталогу логов текущего процесса 1С. Не заполняется автоматически</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ChoiceButton>true</ChoiceButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="НастройкаТЖКаталогТекущихЛоговКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="НастройкаТЖКаталогТекущихЛоговРасширеннаяПодсказка" id="60"/>
+					<Events>
+						<Event name="StartChoice">НастройкаТЖКаталогТекущихЛоговНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="НастройкаТЖТегЗапроса" id="53">
+					<DataPath>НастройкаТЖТегЗапроса</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнение вспомогательных запросов вида "ВЫБРАТЬ uuid_begin/end КАК query_tag" до и после основного запроса / инструкции для поиска искомого лога в файле логов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НастройкаТЖТегЗапросаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="НастройкаТЖТегЗапросаРасширеннаяПодсказка" id="55"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкаМаксКоличествоСтрок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс. количество строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>НастройкаМаксКоличествоСтрок</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкаВыводитьСвойстваВыборки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить свойства выборки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкаВыводитьСвойстваВыборки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Объект" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.bm_КонсольЗапросов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаВыделятьОтрицательные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделять отрицательные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаМаксШиринаКолонок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс. ширина колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаПереноситьТекст" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переносить текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаФорматЧисла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат числа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаВыполнятьВФоне" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять в фоне</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаШиринаКолонок" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ширина колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>НастройкаШиринаКолонок</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкаФиксированнаяШиринаКолонок" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фикс. ширина колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкаФиксированнаяШиринаКолонок</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкаТЖКаталогЛогов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог логов ТЖ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>НастройкаТЖКаталогЛогов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкаРаботаСТЖ" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с ТЖ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаТЖПутьКФайлуКонфигурацииЛогов" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл конфигурации логов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаТЖТегЗапроса" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тег запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаТЖКаталогТекущихЛогов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог текущих логов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>НастройкаТЖКаталогТекущихЛогов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПеременныеОкружения" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переменные окружения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкаСохранятьРезультаты" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять результаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкаСохранятьРезультаты</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+</Form>
