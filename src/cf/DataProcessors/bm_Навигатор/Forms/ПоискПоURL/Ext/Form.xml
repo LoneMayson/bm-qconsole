@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНайти" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаНайти</CommandName>
+				<ExtendedTooltip name="ФормаКомандаНайтиРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ФормаКомандаПоказатьВСписке" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаПоказатьВСписке</CommandName>
+				<ExtendedTooltip name="ФормаКомандаПоказатьВСпискеРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<ButtonGroup name="ФормаОткрыть" id="11">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Открыть</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма открыть</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Representation>Compact</Representation>
+				<ExtendedTooltip name="ФормаОткрытьРасширеннаяПодсказка" id="12"/>
+				<ChildItems>
+					<Button name="ФормаОткрытьФормуОбработки" id="13">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаОткрытьФормуОбработки</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Открыть</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаОткрытьФормуОбработкиРасширеннаяПодсказка" id="14"/>
+					</Button>
+					<Button name="ФормаОткрытьФормуКонфигурации" id="15">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаОткрытьФормуКонфигурации</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>форма к.</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаОткрытьФормуКонфигурацииРасширеннаяПодсказка" id="16"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="RefURL" id="17">
+			<DataPath>RefURL</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="RefURLКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="RefURLРасширеннаяПодсказка" id="19"/>
+			<Events>
+				<Event name="OnChange">RefURLПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="RefUUID" id="1">
+			<DataPath>RefUUID</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="RefUUIDКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="RefUUIDРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">RefUUIDПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Ссылка" id="4">
+			<DataPath>Ссылка</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="Opening">СсылкаОткрытие</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.bm_Навигатор</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RefUUID" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>UUID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ссылка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="RefURL" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>URL</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Настройки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Описание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПоказатьВСписке" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать в списке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать в списке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПоказатьВСписке</Action>
+		</Command>
+		<Command name="КомандаНайти" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНайти</Action>
+		</Command>
+		<Command name="КомандаОткрытьФормуКонфигурации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму обработки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьЭлемент</Action>
+		</Command>
+		<Command name="КомандаОткрытьФормуОбработки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть форму обработки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьЭлемент</Action>
+		</Command>
+	</Commands>
+</Form>
